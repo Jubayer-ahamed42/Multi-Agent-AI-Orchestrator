@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: personal-ai-assistant
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DEFAULT_MODEL
+        value: gemini/gemini-3.5-flash-lite
+      - key: MAX_EVAL_RETRIES
+        value: "3"
+      - key: ACTIVE_MODEL
+        value: gemini/gemini-3.5-flash-lite
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: GEMINI_API_KEY_BACKUP
+        sync: false
+
+

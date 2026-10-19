@@ -1,0 +1,27 @@
+# Environment & Secrets (CRITICAL: Never commit to Git)
+.env
+*.env
+*.pem
+*.key
+
+# Python Virtual Environments & Caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Local Database & Sandbox Runtime files
+database/*.db*
+database/assistant_memory.db*
+sandbox/
+*.sqlite3*
+data/
+*.log
+
+# Streamlit Local Configurations
+.streamlit/
+
+# Testing & Pytest
+.pytest_cache/
+
